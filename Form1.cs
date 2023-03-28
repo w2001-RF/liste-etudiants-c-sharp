@@ -40,11 +40,10 @@ namespace ListeEtude
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            int id = 1;
-            String cne;
-            String nom;
-            String ville;
-            String niveau;
+            String cne = txt_cne.Text;
+            String nom = txt_nom.Text;
+            String ville = txt_ville.Text;
+            String niveau = txt_niveau.Text;
             try
             {
                 //Ouverture de la connexion
@@ -53,25 +52,19 @@ namespace ListeEtude
                 //Requete SQL (Insert)
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "insert into etudiants (id, cne, nom, ville, niveau) values ('" + ;
+                cmd.CommandText = "insert into etudiants (cne, nom, ville, niveau) values ('" + cne + "','" + nom + "','" + ville + "','" + niveau + "')";
 
-                //Contiendra les données
-                DataTable dta = new DataTable();
-
-                //Permet de lire les données
-                SqlDataAdapter dr = new SqlDataAdapter(cmd.CommandText, conn);
-
-                //Récupère les données
-                dr.Fill(dta);
-
-                //Affiche les données dans la grille
-                dataGridView1.DataSource = dta;
+                //Exécution de la requete SQL
+                cmd.ExecuteNonQuery();
+                
+                //Fermeture de la connexion à la base de donnée
                 conn.Close();
-                MessageBox.Show("Success");
+
+                MessageBox.Show("Etudiant ajouté avec Succès");
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Erreur");
+                MessageBox.Show(ex.Message);
             }
         }
 
