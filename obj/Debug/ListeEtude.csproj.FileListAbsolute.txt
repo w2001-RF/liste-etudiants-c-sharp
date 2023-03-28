@@ -13,3 +13,5 @@ C:\Users\DELL\Desktop\wassim_memory\wassim_COURS-Exames\G_Inf\S8\Dotnet\TP2\List
 C:\Users\DELL\Desktop\wassim_memory\wassim_COURS-Exames\G_Inf\S8\Dotnet\TP2\ListeEtude\obj\Debug\ListeEtude.csproj.CopyComplete
 C:\Users\DELL\Desktop\wassim_memory\wassim_COURS-Exames\G_Inf\S8\Dotnet\TP2\ListeEtude\obj\Debug\ListeEtude.exe
 C:\Users\DELL\Desktop\wassim_memory\wassim_COURS-Exames\G_Inf\S8\Dotnet\TP2\ListeEtude\obj\Debug\ListeEtude.pdb
+C:\Users\DELL\Desktop\wassim_memory\wassim_COURS-Exames\G_Inf\S8\Dotnet\TP2\ListeEtude\bin\Debug\db.mdf
+C:\Users\DELL\Desktop\wassim_memory\wassim_COURS-Exames\G_Inf\S8\Dotnet\TP2\ListeEtude\bin\Debug\db_log.ldf

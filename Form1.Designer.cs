@@ -53,6 +53,7 @@
             this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ville = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cne = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_test_db = new MetroFramework.Controls.MetroTile();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.metroPanel2.SuspendLayout();
@@ -347,11 +348,25 @@
             this.cne.HeaderText = "CNE";
             this.cne.Name = "cne";
             // 
+            // btn_test_db
+            // 
+            this.btn_test_db.ActiveControl = null;
+            this.btn_test_db.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_test_db.Location = new System.Drawing.Point(281, 393);
+            this.btn_test_db.Name = "btn_test_db";
+            this.btn_test_db.Size = new System.Drawing.Size(162, 34);
+            this.btn_test_db.TabIndex = 7;
+            this.btn_test_db.Text = "Tester connection DB";
+            this.btn_test_db.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_test_db.UseSelectable = true;
+            this.btn_test_db.Click += new System.EventHandler(this.btn_test_db_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(882, 450);
+            this.Controls.Add(this.btn_test_db);
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.btn_delete);
@@ -395,6 +410,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
         private System.Windows.Forms.DataGridViewTextBoxColumn ville;
         private System.Windows.Forms.DataGridViewTextBoxColumn cne;
+        private MetroFramework.Controls.MetroTile btn_test_db;
     }
 }
 
