@@ -68,5 +68,45 @@ namespace ListeEtude
             }
         }
 
+        private void btn_show_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Ouverture de la connexion
+                conn.Open();
+
+                //Requete SQL (select all)
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from [etudiants]";
+                cmd.ExecuteNonQuery();
+
+                //Contiendre les données
+                DataTable dt = new DataTable();
+
+                //Permet de lire les données
+                SqlDataAdapter datado = new SqlDataAdapter(cmd.CommandText, conn);
+
+                //Récupère les données
+                datado.Fill(dt);
+
+                //Renommer les noms des columns
+                dt.Columns["id"].ColumnName = "ID";
+                dt.Columns["cne"].ColumnName = "CNE";
+                dt.Columns["nom"].ColumnName = "Nom";
+                dt.Columns["ville"].ColumnName = "Ville";
+                dt.Columns["niveau"].ColumnName = "Niveau";
+
+                //Affiche les données dans la grille = EtdDataGrid
+                EtdDataGrid.DataSource = dt;
+
+                //Fermeture de la connexion à la base de donnée
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
